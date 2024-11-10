@@ -1,0 +1,796 @@
+/*Declaring Fonts to use across app*/
+@font-face {
+  font-family: "Geist";
+  src: url(../fonts/webfonts/Geist-Light.woff2);
+  src: url(../fonts/webfonts/Geist-Light.woff2) format("woff2"),
+  url(../fonts/ttf/Geist-Light.ttf) format("truetype"),
+  url(../fonts/otf/Geist-Light.otf) format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(../fonts/webfonts/Geist-Regular.woff2);
+  src: url(../fonts/webfonts/Geist-Regular.woff2) format("woff2"),
+  url(../fonts/ttf/Geist-Regular.ttf) format("truetype"),
+  url(../fonts/otf/Geist-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(../fonts/webfonts/Geist-Medium.woff2);
+  src: url(../fonts/webfonts/Geist-Medium.woff2) format("woff2"),
+  url(../fonts/ttf/Geist-Medium.ttf) format("truetype"),
+  url(../fonts/otf/Geist-Medium.otf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(../fonts/webfonts/Geist-SemiBold.woff2);
+  src: url(../fonts/webfonts/Geist-SemiBold.woff2) format("woff2"),
+  url(../fonts/ttf/Geist-SemiBold.ttf) format("truetype"),
+  url(../fonts/otf/Geist-SemiBold.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, div, a, h1, img, h2, h3, h4, h5, h6, span, pre, blockquote, b, table, nav, video, section {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  font-size: 16px; /* Base font size */
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: 'Geist', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, rgba(205, 197, 197, 0.5), #ffffff);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #fde9c3;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fde9c3;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/* ------ Animations ------- */
+
+.slide {
+  -webkit-animation: slide .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  -moz-animation: slide .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  animation: slide .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+.delay01 {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.delay02 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+.delay03 {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s;
+}
+
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(10vH);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vH);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-30px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+}
+
+
+/* Custom Classes */
+
+/** -- Header Section ---- */
+
+.header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1111;
+
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.logo, .header a {
+  font-family: 'Geist', sans-serif;
+  color: #111111;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*for screen sizes less than 842px*/
+@media screen and (max-width: 842px) {
+
+  .header {
+    padding: 20px;
+  }
+
+
+  .logo, .header a {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+}
+
+/* -- End of Header Section ----*/
+
+/** ----Hero Home Section ------**/
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24vH 0 16vH 0;
+}
+
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-size: 4.5rem;
+  line-height: 120%;
+  font-weight: 600;
+  color: #111111;
+}
+
+@media screen and (max-width: 842px) {
+  .hero {
+    margin: 0 20px;
+    max-width: 100%;
+    padding: 16vH 0 8vH 0;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    max-width: 100%;
+    line-height: 120%;
+  }
+
+}
+
+/** ---- End of Hero Home Section **/
+
+/** --- Work Section --- */
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work-item {
+  width: calc(50% - 60px);
+  margin-bottom: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.work-item:nth-child(2n-2) {
+  position: relative;
+  top: 200px;
+}
+
+
+.work-item-image {
+  border-radius: 20px;
+  height: auto;
+  overflow: hidden;
+  transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.work-item-image:hover {
+  transform: scale(.95);
+  transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  cursor: pointer;
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.work-item img:hover {
+  filter: brightness(1.2);
+  transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.work-item-info {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.work-item-company {
+  color: #111111;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Geist', sans-serif;
+  display: block;
+  line-height: 160%;
+  text-decoration: none;
+}
+
+.work-item-description {
+  color: #666666;
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  display: block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 842px) {
+  .grid {
+    padding: 20px;
+  }
+
+  .work-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .work-item:nth-child(2n-2) {
+    top: 0;
+  }
+
+  .work-item-info {
+    margin-top: 12px;
+  }
+
+  .work-item-image {
+    height: 480px;
+  }
+
+  .work-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .work-item-company {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .work-item-description {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+
+}
+
+
+/* ---- End of Work Section ---- */
+
+/* Home page about*/
+.about-me {
+  max-width: 45vw;
+  margin: 0 auto;
+  padding: 12vw 0 10vw 0;
+  max-width: 760px;
+}
+
+p {
+  color: #333333;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 300;
+  display: block;
+  line-height: 160%;
+}
+
+.description a {
+  text-decoration: none;
+  color: #111111;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 500;
+  padding-top: 30px;
+  display: block;
+}
+
+.description a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contact {
+  margin-top: 12vw;
+}
+
+p span {
+  font-family: 'Geist', sans-serif;
+  color: #666666;
+  font-size: inherit;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.email {
+  font-size: 3.7vw;
+  font-weight: 600;
+  color: #111111;
+  display: block;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 842px) {
+  .about-me {
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 10vh 0;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+
+  .description a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .contact {
+    margin-top: 15vh;
+  }
+
+  .email {
+    font-size: 6vw;
+  }
+}
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #888888;
+}
+
+
+/* About page */
+
+
+.about-page {
+  padding: 16vh 0;
+}
+
+.about .text {
+  margin-bottom: 40px;
+}
+
+.photo-pavan {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+  max-width: 1200px;
+}
+
+
+h2 {
+  color: #111111;
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  font-size: 2.75rem;
+  line-height: 120%;
+  margin: 60px 0 40px 0;
+}
+
+h4 {
+  color: #111111;
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 140%;
+  margin: 8px 0 20px 0;
+}
+
+p.title {
+  color: #111111;
+  font-weight: 400;
+}
+
+p.entity {
+  font-size: 1.125rem;
+  line-height: 160%;
+}
+
+p.years {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 160%;
+}
+
+
+@media screen and (min-width: 842px) and (max-width: 1199px) {
+  .about {
+    max-width: 70vw;
+  }
+
+  .photo-pavan {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 842px) {
+
+  .about {
+    margin: 0 20px;
+    max-width: 100%;
+  }
+
+  .about .text {
+    margin-bottom: 20px;
+  }
+
+  .photo-pavan {
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 40px 0 20px 0;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 40px 0 20px 0;
+  }
+
+  .multi-row-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  p.title {
+    font-weight: 500;
+  }
+
+  p.years {
+    font-weight: 400;
+  }
+
+  .contact-options a {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+

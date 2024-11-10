@@ -1,0 +1,197 @@
+.about, .contact, .education-window {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 780px;
+  padding: 8vh 0;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.multi-row{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.multi-row-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.code-content {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1f2937;
+}
+
+/* align text center */
+.window-control {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.window-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin: 8px 0 20px 0;
+}
+
+
+.window-control.red { background-color: #ef4444;}
+.window-control.yellow { background-color: #f59e0b; text-align: center}
+.window-control.green { background-color: #10b981; text-align: center }
+
+
+.education-window {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+}
+
+
+
+
+/* Contact */
+
+.social-container {
+  width: 100%;
+  max-width: 48rem;
+  transition: all 0.7s ease-out;
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Geist', monospace;
+  color: #7c3aed;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 5vh;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  background: #f8fafc;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.social-link .platform {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.social-link .username {
+  font-size: 1.125rem;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+
+.social-link .icons {
+  transition: stroke 0.3s ease;
+  stroke: #333; /* Default black stroke color */
+}
+
+/* Gradients on hover */
+
+/* On Hover: Replace Black and White with Gradients */
+.social-link:hover:nth-child(1) .st0 { fill: url(#gradient1); stroke: none; }
+.social-link:hover:nth-child(1) .st1 { fill: url(#gradient2); stroke: none; }
+.social-link:hover:nth-child(1) .st2 { fill: url(#gradient3); stroke: none; }
+.social-link:hover:nth-child(1) .st3 { fill: url(#gradient4); stroke: none; }
+.social-link:hover:nth-child(1) .st4 { fill: url(#gradient5); stroke: none; }
+
+.social-link:hover:nth-child(2) .icons {
+  stroke: url(#gradient-github);
+}
+
+.social-link:hover:nth-child(3) .icons {
+  stroke: url(#gradient-linkedin);
+}
+
+.social-link:hover:nth-child(4) .icons {
+  stroke: url(#gradient-stackoverflow);
+}
+.social-link:hover:nth-child(5) .icons {
+  stroke: url(#gradient-instagram);
+}
+
+
+
+
+
+@media screen and (max-width: 842px) {
+
+  .about, .contact{
+    margin: 0 20px;
+    max-width: 100%;
+    padding: 16vH 0 8vH 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    max-width: 100%;
+    line-height: 100%;
+  }
+
+  .about .text {
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .social-container {
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 10vh 0;
+    transition: all 0.7s ease-out;
+  }
+
+  .social-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Geist', monospace;
+    color: #7c3aed;
+    margin-bottom: 2rem;
+  }
+
+  .social-links {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 4vh;
+  }
+
+
+}
