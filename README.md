@@ -15,7 +15,7 @@
 --- 
 
 # 💫 About Me:
-#### 🧑‍💻 Software engineer with 4 years of professional experience committed to building intuitive solutions to everyday problems that go live in the market and make an impact. 
+#### 🧑‍💻 Software engineer with 5 years of professional experience committed to building intuitive solutions to everyday problems that go live in the market and make an impact. 
 #### 🎓 Computer Science Graduate Student at [JNTU Kakinada](https://www.jntucek.ac.in/)
 #### ⚡ A technology enthusiast who loves exploring new technologies and leveraging them to solve real-life problems.
 #### ❤ I enjoy coding and love building Apps.
