@@ -184,6 +184,12 @@
   <img src="https://github-contributor-stats.vercel.app/api?username=pavan555&limit=5&theme=noctis_minimus&combine_all_yearly_contributions=true&hide_border=true" alt="Top contributed repos in git"  />
 </div>
 
+###
+
+### :octocat: Open Source Contributions
+
+1. DeepEval (The LLM Evaluation Framework) - [fixed issue where the tool correctness metric was failing due to an unhashable type error #1487](https://github.com/confident-ai/deepeval/pull/1487)
+2. Langflow is a powerful tool for building and deploying AI-powered agents and workflows. [fix: bug where the pinecone component was inserting embeddings three times instead of once. #2826](https://github.com/langflow-ai/langflow/pull/2826)
 
 ---
 <!--
